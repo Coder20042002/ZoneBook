@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ZoneBook.WebApp.Controllers.Add;
+using ZoneBook.WebApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +29,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Category}/{action=Index}/{id?}");
 
 app.Run();
